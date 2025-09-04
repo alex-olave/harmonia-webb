@@ -34,11 +34,11 @@ const Contact = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Get In Touch
+              Kontakt
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Ready to take the first step towards better mental health? We're here to help. 
-              Contact us today to schedule a consultation or ask any questions you may have.
+              Redo att ta första steget mot bättre mental hälsa? Jag är här för att hjälpa.
+              Kontakta mig idag för att boka en konsultation eller ställa frågor.
             </p>
           </div>
 
@@ -47,32 +47,32 @@ const Contact = () => {
             <div className="lg:col-span-2">
               <Card className="bg-card shadow-card animate-fade-in">
                 <CardHeader>
-                  <CardTitle className="text-2xl text-foreground">Send Us a Message</CardTitle>
+                  <CardTitle className="text-2xl text-foreground">Skicka ett meddelande</CardTitle>
                   <p className="text-muted-foreground">
-                    Fill out the form below and we'll get back to you within 24 hours.
+                    Fyll i formuläret nedan så återkommer jag inom 24 timmar.
                   </p>
                 </CardHeader>
                 <CardContent>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <Label htmlFor="name">Full Name *</Label>
+                        <Label htmlFor="name">Fullständigt namn *</Label>
                         <Input
                           id="name"
                           value={formData.name}
                           onChange={(e) => handleInputChange("name", e.target.value)}
-                          placeholder="Your full name"
+                          placeholder="Ditt fullständiga namn"
                           required
                         />
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="email">Email Address *</Label>
+                        <Label htmlFor="email">E-postadress *</Label>
                         <Input
                           id="email"
                           type="email"
                           value={formData.email}
                           onChange={(e) => handleInputChange("email", e.target.value)}
-                          placeholder="your.email@example.com"
+                          placeholder="din.epost@exempel.se"
                           required
                         />
                       </div>
@@ -80,63 +80,63 @@ const Contact = () => {
 
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <Label htmlFor="phone">Phone Number</Label>
+                        <Label htmlFor="phone">Telefonnummer</Label>
                         <Input
                           id="phone"
                           type="tel"
                           value={formData.phone}
                           onChange={(e) => handleInputChange("phone", e.target.value)}
-                          placeholder="(555) 123-4567"
+                          placeholder="070-123 45 67"
                         />
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="contact-method">Preferred Contact Method</Label>
+                        <Label htmlFor="contact-method">Föredragen kontaktväg</Label>
                         <select
                           id="contact-method"
                           value={formData.preferredContact}
                           onChange={(e) => handleInputChange("preferredContact", e.target.value)}
                           className="w-full px-3 py-2 bg-background border border-input rounded-md text-sm"
                         >
-                          <option value="email">Email</option>
-                          <option value="phone">Phone</option>
-                          <option value="either">Either</option>
+                          <option value="email">E-post</option>
+                          <option value="phone">Telefon</option>
+                          <option value="either">Spelar ingen roll</option>
                         </select>
                       </div>
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="subject">Subject</Label>
+                      <Label htmlFor="subject">Ämne</Label>
                       <select
                         id="subject"
                         value={formData.subject}
                         onChange={(e) => handleInputChange("subject", e.target.value)}
                         className="w-full px-3 py-2 bg-background border border-input rounded-md text-sm"
                       >
-                        <option value="">Select a subject</option>
-                        <option value="consultation">Free Consultation</option>
-                        <option value="individual">Individual Therapy</option>
-                        <option value="group">Group Therapy</option>
-                        <option value="couples">Couples Therapy</option>
-                        <option value="pricing">Pricing Questions</option>
-                        <option value="insurance">Insurance Questions</option>
-                        <option value="other">Other</option>
+                        <option value="">Välj ett ämne</option>
+                        <option value="consultation">Kostnadsfri konsultation</option>
+                        <option value="individual">Individuell terapi</option>
+                        <option value="group">Gruppterapi</option>
+                        <option value="couples">Parterapi</option>
+                        <option value="pricing">Prisfrågor</option>
+                        <option value="insurance">Försäkringsfrågor</option>
+                        <option value="other">Annat</option>
                       </select>
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="message">Message *</Label>
+                      <Label htmlFor="message">Meddelande *</Label>
                       <Textarea
                         id="message"
                         value={formData.message}
                         onChange={(e) => handleInputChange("message", e.target.value)}
-                        placeholder="Tell us how we can help you..."
+                        placeholder="Berätta hur jag kan hjälpa dig..."
                         rows={5}
                         required
                       />
                     </div>
 
                     <Button type="submit" className="w-full bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity">
-                      Send Message
+                      Skicka meddelande
                     </Button>
                   </form>
                 </CardContent>
@@ -147,17 +147,16 @@ const Contact = () => {
             <div className="space-y-6">
               <Card className="bg-card shadow-card animate-slide-in">
                 <CardHeader>
-                  <CardTitle className="text-xl text-foreground">Contact Information</CardTitle>
+                  <CardTitle className="text-xl text-foreground">Kontaktinformation</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="flex items-start gap-3">
                     <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                     <div>
-                      <p className="font-medium text-foreground">Address</p>
+                      <p className="font-medium text-foreground">Adress</p>
                       <p className="text-sm text-muted-foreground">
-                        123 Wellness Way<br />
-                        Suite 101<br />
-                        Your City, State 12345
+                        Online-terapi<br />
+                        Hela Sverige<br />
                       </p>
                     </div>
                   </div>
@@ -165,29 +164,29 @@ const Contact = () => {
                   <div className="flex items-start gap-3">
                     <Phone className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                     <div>
-                      <p className="font-medium text-foreground">Phone</p>
-                      <p className="text-sm text-muted-foreground">(555) 123-4567</p>
-                      <p className="text-xs text-muted-foreground">Crisis Line: (555) 123-HELP</p>
+                      <p className="font-medium text-foreground">Telefon</p>
+                      <p className="text-sm text-muted-foreground">070-123 45 67</p>
+                      <p className="text-xs text-muted-foreground">Krislinje: 112</p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3">
                     <Mail className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                     <div>
-                      <p className="font-medium text-foreground">Email</p>
-                      <p className="text-sm text-muted-foreground">info@harmonia-therapy.com</p>
-                      <p className="text-xs text-muted-foreground">Response within 24 hours</p>
+                      <p className="font-medium text-foreground">E-post</p>
+                      <p className="text-sm text-muted-foreground">anna-karin@harmonia-kbt.se</p>
+                      <p className="text-xs text-muted-foreground">Svar inom 24 timmar</p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3">
                     <Clock className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                     <div>
-                      <p className="font-medium text-foreground">Office Hours</p>
+                      <p className="font-medium text-foreground">Tider</p>
                       <div className="text-sm text-muted-foreground space-y-1">
-                        <p>Monday - Friday: 8:00 AM - 8:00 PM</p>
-                        <p>Saturday: 9:00 AM - 5:00 PM</p>
-                        <p>Sunday: 10:00 AM - 4:00 PM</p>
+                        <p>Måndag - fredag: 08:00 - 20:00</p>
+                        <p>Lördag: 09:00 - 17:00</p>
+                        <p>Söndag: 10:00 - 16:00</p>
                       </div>
                     </div>
                   </div>
@@ -196,40 +195,40 @@ const Contact = () => {
 
               <Card className="bg-card shadow-card">
                 <CardHeader>
-                  <CardTitle className="text-lg text-foreground">Quick Actions</CardTitle>
+                  <CardTitle className="text-lg text-foreground">Snabbåtgärder</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <Button className="w-full bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity">
                     <Calendar className="w-4 h-4 mr-2" />
-                    Book Free Consultation
+                    Boka kostnadsfri konsultation
                   </Button>
                   <Button variant="outline" className="w-full">
                     <MessageCircle className="w-4 h-4 mr-2" />
-                    Live Chat Support
+                    Livechatt
                   </Button>
                 </CardContent>
               </Card>
 
               <Card className="bg-card shadow-card">
                 <CardHeader>
-                  <CardTitle className="text-lg text-foreground">Emergency Support</CardTitle>
+                  <CardTitle className="text-lg text-foreground">Krissupport</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <p className="text-sm text-muted-foreground">
-                    If you're experiencing a mental health emergency, please contact:
+                    Om du har en akut kris, kontakta:
                   </p>
                   <div className="space-y-2">
                     <Badge variant="secondary" className="w-full justify-start p-3">
-                      <span className="font-medium">Crisis Line:</span>
-                      <span className="ml-2">(555) 123-HELP</span>
+                      <span className="font-medium">Krislinje:</span>
+                      <span className="ml-2">112</span>
                     </Badge>
                     <Badge variant="secondary" className="w-full justify-start p-3">
-                      <span className="font-medium">National Suicide Prevention:</span>
-                      <span className="ml-2">988</span>
+                      <span className="font-medium">Suicidlinjen:</span>
+                      <span className="ml-2">90101</span>
                     </Badge>
                     <Badge variant="secondary" className="w-full justify-start p-3">
-                      <span className="font-medium">Emergency Services:</span>
-                      <span className="ml-2">911</span>
+                      <span className="font-medium">BRIS (för barn/unga):</span>
+                      <span className="ml-2">116 111</span>
                     </Badge>
                   </div>
                 </CardContent>
@@ -240,47 +239,47 @@ const Contact = () => {
           {/* FAQ Section */}
           <Card className="bg-card shadow-card">
             <CardHeader>
-              <CardTitle className="text-2xl text-foreground text-center">Frequently Asked Questions</CardTitle>
+              <CardTitle className="text-2xl text-foreground text-center">Vanliga frågor</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="space-y-4">
                   <div>
-                    <h4 className="font-semibold text-foreground mb-2">How quickly can I get an appointment?</h4>
+                    <h4 className="font-semibold text-foreground mb-2">Hur snabbt kan jag få en tid?</h4>
                     <p className="text-sm text-muted-foreground">
-                      We typically have availability within 1-2 weeks for new clients. Emergency consultations can often be scheduled within 24-48 hours.
+                      Jag har vanligtvis lediga tider inom 1-2 veckor för nya klienter. Akuta konsultationer kan ofta bokas inom 24-48 timmar.
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground mb-2">Do you offer telehealth sessions?</h4>
+                    <h4 className="font-semibold text-foreground mb-2">Erbjuder du online-terapi?</h4>
                     <p className="text-sm text-muted-foreground">
-                      Yes, we offer secure video therapy sessions for your convenience. Many clients find telehealth just as effective as in-person sessions.
+                      Ja, jag erbjuder säkra videoterapi-sessioner för din bekvämlighet. Många klienter tycker att online-terapi är lika effektivt som fysiska möten.
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground mb-2">What should I expect in my first session?</h4>
+                    <h4 className="font-semibold text-foreground mb-2">Vad kan jag förvänta mig av första sessionen?</h4>
                     <p className="text-sm text-muted-foreground">
-                      Your first session will focus on understanding your concerns, discussing your goals, and developing a personalized treatment plan together.
+                      Första sessionen fokuserar på att förstå dina bekymmer, diskutera dina mål och tillsammans utveckla en personlig behandlingsplan.
                     </p>
                   </div>
                 </div>
                 <div className="space-y-4">
                   <div>
-                    <h4 className="font-semibold text-foreground mb-2">Is my information confidential?</h4>
+                    <h4 className="font-semibold text-foreground mb-2">Är min information konfidentiell?</h4>
                     <p className="text-sm text-muted-foreground">
-                      Absolutely. All sessions and communications are strictly confidential, following HIPAA guidelines and professional ethics standards.
+                      Absolut. Alla sessioner och kommunikation är strikt konfidentiell, enligt sekretesslagen och professionella etiska riktlinjer.
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground mb-2">How long does CBT treatment typically take?</h4>
+                    <h4 className="font-semibold text-foreground mb-2">Hur lång är en KBT-behandling vanligtvis?</h4>
                     <p className="text-sm text-muted-foreground">
-                      CBT is typically shorter-term than other therapies, often ranging from 12-20 sessions, though this varies based on individual needs and goals.
+                      KBT är vanligtvis kortare än andra terapiformer, ofta 12-20 sessioner, men det varierar beroende på individuella behov och mål.
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground mb-2">Do you accept insurance?</h4>
+                    <h4 className="font-semibold text-foreground mb-2">Tar du emot försäkring?</h4>
                     <p className="text-sm text-muted-foreground">
-                      We accept most major insurance plans. Our staff can help verify your benefits and explain your coverage before your first session.
+                      Jag tar emot de flesta större försäkringsbolag. Jag hjälper gärna till att kontrollera ditt försäkringsskydd innan första sessionen.
                     </p>
                   </div>
                 </div>
