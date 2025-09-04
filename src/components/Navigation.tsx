@@ -27,7 +27,7 @@ const Navigation = () => {
               <span className="text-primary-foreground font-bold text-sm">C</span>
             </div>
             <span className="font-display font-semibold text-lg text-foreground">
-              CBT Therapy Center
+              CBT Support
             </span>
           </Link>
 
@@ -47,7 +47,7 @@ const Navigation = () => {
               </Link>
             ))}
             <Button size="sm" className="bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity">
-              Book Consultation
+              Get In Touch
             </Button>
           </div>
 
@@ -84,7 +84,7 @@ const Navigation = () => {
               ))}
               <div className="px-3 py-2">
                 <Button size="sm" className="w-full bg-gradient-primary text-primary-foreground">
-                  Book Consultation
+                  Get In Touch
                 </Button>
               </div>
             </div>
