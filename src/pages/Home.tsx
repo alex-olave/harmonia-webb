@@ -19,8 +19,8 @@ const Home = () => {
               <span className="bg-gradient-primary bg-clip-text text-transparent"> Känslomässigt Välbefinnande</span>
             </h1>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-              Jag är här för att stödja dig genom livets utmaningar med personlig kognitiv beteendeterapi. 
-              Tillsammans arbetar vi mot läkning och tillväxt i en trygg, förstående miljö.
+              Jag heter Anna-Karin och erbjuder online KBT-terapi för dig som vill förstå dig själv bättre och känna större acceptans. 
+              Tillsammans utforskar vi vägar som gör livet lite lättare och mer meningsfullt.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity">
@@ -39,7 +39,7 @@ const Home = () => {
               <div className="text-sm text-muted-foreground">Års Erfarenhet</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-foreground">Legitimerad</div>
+              <div className="text-2xl font-bold text-foreground">Diplomerad</div>
               <div className="text-sm text-muted-foreground">KBT-terapeut</div>
             </div>
           </div>
@@ -90,13 +90,13 @@ const Home = () => {
               </h2>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                 KBT är en av de mest effektiva terapiformerna eftersom den ger dig praktiska verktyg du kan använda direkt. 
-                Vi arbetar tillsammans för att förstå dina tankar och känslor, och hitta nya sätt att reagera på utmaningar.
+                Jag tror att förändring ofta börjar med små steg, och att det är lättare att ta dem när man inte går ensam.
               </p>
               
               <div className="space-y-4">
                 {[
                   "Praktiska verktyg du kan använda omedelbart",
-                  "Varm, personlig strategi för läkning",
+                  "Online-sessioner för flexibilitet",
                   "Fokus på dina aktuella utmaningar och mål",
                   "Lär dig färdigheter för långsiktigt känslomässigt välbefinnande",
                   "Arbeta i din egen takt i en trygg miljö"

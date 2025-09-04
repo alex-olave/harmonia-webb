@@ -21,15 +21,15 @@ const About = () => {
           {/* Our Mission */}
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
             <div className="animate-slide-in">
-              <h2 className="text-3xl font-bold text-foreground mb-6">Min Uppdrag</h2>
+              <h2 className="text-3xl font-bold text-foreground mb-6">Min Filosofi</h2>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                På Harmonia tror jag att alla förtjänar tillgång till medkännande mentalvård. 
-                Min uppdrag är att tillhandahålla professionella, omtänksamma och effektiva 
-                kognitiva beteendeterapi-tjänster som ger individer kraft att övervinna utmaningar och leva meningsfulla liv.
+                Här finns utrymme för både allvar och värme. Jag vill skapa en plats där du får vara precis som du är – med allt som känns lätt och allt som känns svårt.
+              </p>
+              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                Genom KBT arbetar vi tillsammans för att du ska förstå dig själv bättre och möta dig själv med mer acceptans och vänlighet. Jag tror att förändring ofta börjar med små steg, och att det är lättare att ta dem när man inte går ensam.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Jag är engagerad i att skapa en trygg, icke-dömande miljö där läkning och tillväxt kan ske. 
-                Min evidensbaserade metod säkerställer att du får effektiv, personlig behandling.
+                Min evidensbaserade metod säkerställer att du får effektiv, personlig behandling i en trygg, icke-dömande miljö där läkning och tillväxt kan ske.
               </p>
             </div>
             <div className="bg-card p-8 rounded-lg shadow-card animate-fade-in">
@@ -75,10 +75,10 @@ const About = () => {
                   <div className="grid lg:grid-cols-3 gap-8 items-center">
                     <div className="lg:col-span-1 text-center">
                       <div className="w-32 h-32 bg-gradient-primary rounded-full mx-auto mb-4 flex items-center justify-center">
-                        <span className="text-primary-foreground text-4xl font-bold">H</span>
+                        <span className="text-primary-foreground text-3xl font-bold">AK</span>
                       </div>
-                      <h3 className="font-bold text-xl text-foreground mb-2">Legitimerad KBT-terapeut</h3>
-                      <p className="text-primary font-medium mb-4">8+ Års Erfarenhet</p>
+                      <h3 className="font-bold text-xl text-foreground mb-2">Anna-Karin</h3>
+                      <p className="text-primary font-medium mb-4">Diplomerad KBT-terapeut</p>
                       <div className="flex flex-wrap gap-2 justify-center">
                         <Badge variant="secondary" className="text-xs">Ångest</Badge>
                         <Badge variant="secondary" className="text-xs">Depression</Badge>
@@ -87,17 +87,13 @@ const About = () => {
                     </div>
                     <div className="lg:col-span-2">
                       <p className="text-muted-foreground mb-6 leading-relaxed">
-                        Jag blev terapeut eftersom jag tror på kraften i små förändringar att skapa stora transformationer. 
-                        Efter att ha slutfört min utbildning inom kognitiv beteendeterapi har jag de senaste åtta åren 
-                        hjälpt individer att arbeta igenom ångest, depression och livets utmanande övergångar.
+                        Jag heter Anna-Karin och är diplomerad KBT-terapeut. Jag arbetar som samtalsterapeut med KBT (kognitiv beteendeterapi) i fokus. Med hjälp av KBT får du hjälp med att förändra negativa tankar och beteenden som påverkar ditt välmående.
                       </p>
                       <p className="text-muted-foreground mb-6 leading-relaxed">
-                        Det jag älskar mest med KBT är att det ger människor praktiska verktyg de kan använda direkt. 
-                        Min metod är varm, samarbetsinriktad och fokuserad på dina unika mål och styrkor.
+                        Våra samtal utförs online, vilket är en fördel för dig som har ett hektiskt vardagsliv eller andra orsaker som gör att det är svårt att behöva åka iväg för att träffa en terapeut.
                       </p>
                       <p className="text-muted-foreground leading-relaxed">
-                        När jag inte arbetar hittar du mig läsande, vandrande eller tillbringa tid med min familj. 
-                        Jag tar med samma känsla av balans och äkthet till vårt arbete tillsammans.
+                        Jag erbjuder KBT för dig som vill förstå dig själv bättre och känna större acceptans. Tillsammans utforskar vi dina tankar, känslor och beteenden – och hittar vägar som gör livet lite lättare och mer meningsfullt.
                       </p>
                     </div>
                   </div>
