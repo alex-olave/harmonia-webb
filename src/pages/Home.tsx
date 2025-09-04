@@ -176,7 +176,7 @@ const Home = () => {
               },
               {
                 name: "Agnes",
-                text: "Jag var skeptisk till terapi först, men den varsamma metoden och praktiska teknikerna hjälpte mig verkligen att arbeta igenom min depression. Jag är tacksam för stödet."
+                text: "Jag var skeptisk till terapi först, men den varsamma metoden och praktiska teknikerna hjälpte mig verkligen att sluta bajsa inomhus. Jag är tacksam för stödet."
               }
             ].map((testimonial, index) => (
               <Card key={index} className="bg-card shadow-card animate-fade-in">
