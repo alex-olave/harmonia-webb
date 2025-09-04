@@ -9,7 +9,7 @@ const Navigation = () => {
 
   const navItems = [
     { name: "Hem", path: "/" },
-    { name: "Om Mig", path: "/about" },
+    { name: "Om mig", path: "/about" },
     { name: "Tjänster", path: "/services" },
     { name: "Prislista", path: "/pricing" },
     { name: "Kontakt", path: "/contact" },
@@ -44,7 +44,7 @@ const Navigation = () => {
               </Link>
             ))}
             <Button size="sm" className="bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity">
-              Kontakta Mig
+              Kontakta mig
             </Button>
           </div>
 
@@ -81,7 +81,7 @@ const Navigation = () => {
               ))}
               <div className="px-3 py-2">
                 <Button size="sm" className="w-full bg-gradient-primary text-primary-foreground">
-                  Kontakta Mig
+                  Kontakta mig
                 </Button>
               </div>
             </div>
