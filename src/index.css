@@ -8,48 +8,48 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Calming therapy design system */
-    --background: 32 57% 97%;
-    --foreground: 215 25% 27%;
+    /* Warm, earthy Harmonia design system */
+    --background: 43 35% 96%;
+    --foreground: 25 15% 25%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 25% 27%;
+    --card-foreground: 25 15% 25%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 27%;
+    --popover-foreground: 25 15% 25%;
 
-    /* Soft teal primary - calming and professional */
-    --primary: 174 42% 47%;
-    --primary-foreground: 0 0% 100%;
-    --primary-glow: 174 50% 65%;
+    /* Warm sage primary - inspired by #E1D8BD */
+    --primary: 43 35% 65%;
+    --primary-foreground: 25 15% 25%;
+    --primary-glow: 43 45% 75%;
 
-    /* Warm sage secondary */
-    --secondary: 95 20% 85%;
-    --secondary-foreground: 215 25% 27%;
+    /* Soft warm secondary */
+    --secondary: 43 25% 88%;
+    --secondary-foreground: 25 15% 25%;
 
-    /* Soft muted tones */
-    --muted: 32 35% 92%;
-    --muted-foreground: 215 15% 55%;
+    /* Gentle muted tones */
+    --muted: 43 20% 90%;
+    --muted-foreground: 25 12% 45%;
 
-    /* Gentle accent */
-    --accent: 174 30% 88%;
-    --accent-foreground: 215 25% 27%;
+    /* Warm accent */
+    --accent: 43 30% 85%;
+    --accent-foreground: 25 15% 25%;
 
     --destructive: 0 65% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 32 20% 88%;
-    --input: 32 20% 88%;
-    --ring: 174 42% 47%;
+    --border: 43 15% 85%;
+    --input: 43 15% 85%;
+    --ring: 43 35% 65%;
 
-    /* Therapeutic gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(174 42% 47%), hsl(174 50% 65%));
-    --gradient-hero: linear-gradient(135deg, hsl(32 57% 97%), hsl(174 30% 88%));
-    --gradient-calm: linear-gradient(180deg, hsl(0 0% 100%), hsl(32 35% 92%));
+    /* Warm, earthy gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(43 35% 65%), hsl(43 45% 75%));
+    --gradient-hero: linear-gradient(135deg, hsl(43 35% 96%), hsl(43 30% 85%));
+    --gradient-calm: linear-gradient(180deg, hsl(0 0% 100%), hsl(43 20% 90%));
 
-    /* Calming shadows */
-    --shadow-gentle: 0 4px 20px -8px hsl(174 42% 47% / 0.15);
-    --shadow-card: 0 2px 12px -4px hsl(215 25% 27% / 0.08);
+    /* Gentle earth-tone shadows */
+    --shadow-gentle: 0 4px 20px -8px hsl(43 35% 65% / 0.15);
+    --shadow-card: 0 2px 12px -4px hsl(25 15% 25% / 0.08);
 
     /* Smooth transitions */
     --transition-calm: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);

@@ -24,10 +24,10 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">C</span>
+              <span className="text-primary-foreground font-bold text-sm">H</span>
             </div>
             <span className="font-display font-semibold text-lg text-foreground">
-              CBT Support
+              Harmonia
             </span>
           </Link>
 

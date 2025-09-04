@@ -155,10 +155,9 @@ const Contact = () => {
                     <div>
                       <p className="font-medium text-foreground">Address</p>
                       <p className="text-sm text-muted-foreground">
-                        123 Wellness Boulevard<br />
-                        Suite 200<br />
-                        Mental Health District<br />
-                        City, State 12345
+                        123 Wellness Way<br />
+                        Suite 101<br />
+                        Your City, State 12345
                       </p>
                     </div>
                   </div>
@@ -176,7 +175,7 @@ const Contact = () => {
                     <Mail className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                     <div>
                       <p className="font-medium text-foreground">Email</p>
-                      <p className="text-sm text-muted-foreground">info@cbttherapycenter.com</p>
+                      <p className="text-sm text-muted-foreground">info@harmonia-therapy.com</p>
                       <p className="text-xs text-muted-foreground">Response within 24 hours</p>
                     </div>
                   </div>

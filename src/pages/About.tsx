@@ -10,10 +10,10 @@ const About = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              About Our Practice
+              About Harmonia
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              We are dedicated to providing compassionate, evidence-based cognitive behavioral therapy 
+              I'm dedicated to providing compassionate, evidence-based cognitive behavioral therapy 
               to help you overcome life's challenges and achieve lasting positive change.
             </p>
           </div>
@@ -21,15 +21,15 @@ const About = () => {
           {/* Our Mission */}
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
             <div className="animate-slide-in">
-              <h2 className="text-3xl font-bold text-foreground mb-6">Our Mission</h2>
+              <h2 className="text-3xl font-bold text-foreground mb-6">My Mission</h2>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                At CBT Therapy Center, we believe that everyone deserves access to high-quality mental health care. 
-                Our mission is to provide professional, compassionate, and effective cognitive behavioral therapy 
+                At Harmonia, I believe that everyone deserves access to compassionate mental health care. 
+                My mission is to provide professional, caring, and effective cognitive behavioral therapy 
                 services that empower individuals to overcome challenges and live fulfilling lives.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                We are committed to creating a safe, non-judgmental environment where healing and growth can occur. 
-                Our evidence-based approach ensures that you receive the most effective treatment available.
+                I am committed to creating a safe, non-judgmental environment where healing and growth can occur. 
+                My evidence-based approach ensures that you receive effective, personalized treatment.
               </p>
             </div>
             <div className="bg-card p-8 rounded-lg shadow-card animate-fade-in">
@@ -66,62 +66,48 @@ const About = () => {
             </div>
           </div>
 
-          {/* Team Section */}
+          {/* About Me Section */}
           <div className="mb-20">
-            <h2 className="text-3xl font-bold text-foreground text-center mb-12">Meet Our Team</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  name: "Dr. Sarah Johnson",
-                  title: "Licensed Clinical Psychologist",
-                  specialties: ["Anxiety Disorders", "Depression", "Trauma"],
-                  experience: "15+ years experience",
-                },
-                {
-                  name: "Dr. Michael Chen",
-                  title: "CBT Specialist",
-                  specialties: ["OCD", "Phobias", "Panic Disorders"],
-                  experience: "12+ years experience",
-                },
-                {
-                  name: "Dr. Emily Rodriguez",
-                  title: "Clinical Therapist",
-                  specialties: ["Relationship Issues", "Stress Management", "Life Transitions"],
-                  experience: "10+ years experience",
-                },
-              ].map((therapist, index) => (
-                <Card key={index} className="bg-card shadow-card hover:shadow-gentle transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="w-24 h-24 bg-gradient-primary rounded-full mx-auto mb-4 flex items-center justify-center">
-                      <span className="text-primary-foreground text-2xl font-bold">
-                        {therapist.name.split(' ').map(n => n[0]).join('')}
-                      </span>
+            <h2 className="text-3xl font-bold text-foreground text-center mb-12">About Me</h2>
+            <div className="max-w-4xl mx-auto">
+              <Card className="bg-card shadow-card">
+                <CardContent className="p-8">
+                  <div className="grid lg:grid-cols-3 gap-8 items-center">
+                    <div className="lg:col-span-1 text-center">
+                      <div className="w-32 h-32 bg-gradient-primary rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <span className="text-primary-foreground text-4xl font-bold">H</span>
+                      </div>
+                      <h3 className="font-bold text-xl text-foreground mb-2">Licensed CBT Therapist</h3>
+                      <p className="text-primary font-medium mb-4">8+ Years Experience</p>
+                      <div className="flex flex-wrap gap-2 justify-center">
+                        <Badge variant="secondary" className="text-xs">Anxiety</Badge>
+                        <Badge variant="secondary" className="text-xs">Depression</Badge>
+                        <Badge variant="secondary" className="text-xs">Life Transitions</Badge>
+                      </div>
                     </div>
-                    <h3 className="font-bold text-lg text-foreground text-center mb-1">
-                      {therapist.name}
-                    </h3>
-                    <p className="text-primary text-center mb-3 font-medium">
-                      {therapist.title}
-                    </p>
-                    <p className="text-sm text-muted-foreground text-center mb-4">
-                      {therapist.experience}
-                    </p>
-                    <div className="flex flex-wrap gap-2 justify-center">
-                      {therapist.specialties.map((specialty, idx) => (
-                        <Badge key={idx} variant="secondary" className="text-xs">
-                          {specialty}
-                        </Badge>
-                      ))}
+                    <div className="lg:col-span-2">
+                      <p className="text-muted-foreground mb-6 leading-relaxed">
+                        I became a therapist because I believe in the power of small changes to create big transformations. 
+                        After completing my training in cognitive behavioral therapy, I've spent the last eight years 
+                        helping individuals work through anxiety, depression, and life's challenging transitions.
+                      </p>
+                      <p className="text-muted-foreground mb-6 leading-relaxed">
+                        What I love most about CBT is that it gives people practical tools they can use right away. 
+                        My approach is warm, collaborative, and focused on your unique goals and strengths.
+                      </p>
+                      <p className="text-muted-foreground leading-relaxed">
+                        When I'm not working, you'll find me reading, hiking, or spending time with my family. 
+                        I bring this same sense of balance and authenticity to our work together.
+                      </p>
                     </div>
-                  </CardContent>
-                </Card>
-              ))}
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
 
-          {/* Our Approach */}
           <div className="bg-card p-8 rounded-lg shadow-card">
-            <h2 className="text-3xl font-bold text-foreground text-center mb-8">Our Approach</h2>
+            <h2 className="text-3xl font-bold text-foreground text-center mb-8">My Approach</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
                 <h3 className="font-semibold text-lg text-foreground mb-4">Assessment</h3>
