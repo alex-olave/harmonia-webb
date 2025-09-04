@@ -78,7 +78,8 @@ export default {
 			},
 			fontFamily: {
 				'sans': ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-				'display': ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+				'display': ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+				'cormorant': ['Cormorant', 'serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
