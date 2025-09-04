@@ -15,8 +15,8 @@ const Home = () => {
               Medkännande KBT-stöd
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
-              Hitta Din Väg Till
-              <span className="bg-gradient-primary bg-clip-text text-transparent"> Känslomässigt Välbefinnande</span>
+              Hitta din väg till
+              <span className="bg-gradient-primary bg-clip-text text-transparent"> känslomässigt välbefinnande</span>
             </h1>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
               Jag heter Anna-Karin och erbjuder online KBT-terapi för dig som vill förstå dig själv bättre och känna större acceptans. 
@@ -24,10 +24,10 @@ const Home = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity">
-                Boka Ett Samtal
+                Boka ett samtal
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <Link to="/about">Läs Mer Om Min Metod</Link>
+                <Link to="/about">Läs mer om min metodik</Link>
               </Button>
             </div>
           </div>
@@ -35,7 +35,7 @@ const Home = () => {
           {/* Simple Trust Indicators */}
           <div className="mt-12 grid grid-cols-2 gap-6 max-w-md mx-auto animate-slide-in">
             <div className="text-center">
-              <div className="text-2xl font-bold text-foreground">8+</div>
+              <div className="text-2xl font-bold text-foreground">2+</div>
               <div className="text-sm text-muted-foreground">Års Erfarenhet</div>
             </div>
             <div className="text-center">
@@ -50,7 +50,7 @@ const Home = () => {
       <section className="py-20 px-4 bg-gradient-calm">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Hur Jag Kan Hjälpa Dig</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-4">Hur jag kan hjälpa dig</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Jag specialiserar mig på att hjälpa människor arbeta igenom dessa vanliga utmaningar med 
               varsamma, evidensbaserade kognitiva beteendeterapi-tekniker.
@@ -59,11 +59,11 @@ const Home = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { icon: Brain, title: "Ångest & Panik", description: "Övervinn överväldigande oro, panikattacker och social ångest med beprövade KBT-tekniker." },
+              { icon: Brain, title: "Ångest & panik", description: "Övervinn överväldigande oro, panikattacker och social ångest med beprövade KBT-tekniker." },
               { icon: Heart, title: "Depression", description: "Bryt dig fri från negativa tankemönster och återfå glädje och motivation i ditt liv." },
               { icon: Users, title: "Relationsproblem", description: "Förbättra kommunikation och lös konflikter i dina personliga relationer." },
               { icon: Shield, title: "Trauma & PTSD", description: "Bearbeta traumatiska upplevelser säkert med specialiserade traumafokuserade KBT-metoder." },
-              { icon: Brain, title: "OCD & Fobier", description: "Minska tvångsbeteenden och övervinn specifika rädslor genom gradvis exponering." },
+              { icon: Brain, title: "OCD & fobier", description: "Minska tvångsbeteenden och övervinn specifika rädslor genom gradvis exponering." },
               { icon: Heart, title: "Livsförändringar", description: "Navigera stora livsförändringar med självförtroende och känslomässig motståndskraft." }
             ].map((item, index) => (
               <Card key={index} className="bg-card shadow-card hover:shadow-gentle transition-all duration-300 animate-fade-in">
@@ -86,7 +86,7 @@ const Home = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="animate-slide-in">
               <h2 className="text-3xl font-bold text-foreground mb-6">
-                Varför Jag Använder Kognitiv Beteendeterapi
+                Varför kognitiv beteendeterapi?
               </h2>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                 KBT är en av de mest effektiva terapiformerna eftersom den ger dig praktiska verktyg du kan använda direkt. 
@@ -109,19 +109,19 @@ const Home = () => {
               </div>
               
               <Button className="mt-8 bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity" asChild>
-                <Link to="/about">Läs Mer Om Min Metod</Link>
+                <Link to="/about">Läs mer om min metodik</Link>
               </Button>
             </div>
 
             <div className="bg-card p-8 rounded-lg shadow-card animate-fade-in">
-              <h3 className="text-2xl font-bold text-foreground mb-6 text-center">Så Fungerar KBT</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-6 text-center">Så fungerar KBT</h3>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="w-8 h-8 bg-gradient-primary rounded-full flex items-center justify-center flex-shrink-0">
                     <span className="text-primary-foreground font-bold text-sm">1</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground mb-1">Identifiera Mönster</h4>
+                    <h4 className="font-semibold text-foreground mb-1">Identifiera mönster</h4>
                     <p className="text-sm text-muted-foreground">Känna igen onyttiga tankar och beteenden</p>
                   </div>
                 </div>
@@ -130,7 +130,7 @@ const Home = () => {
                     <span className="text-primary-foreground font-bold text-sm">2</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground mb-1">Utmana Tankar</h4>
+                    <h4 className="font-semibold text-foreground mb-1">Utmana tankar</h4>
                     <p className="text-sm text-muted-foreground">Ifrågasätt och omformulera negativt tänkande</p>
                   </div>
                 </div>
@@ -139,7 +139,7 @@ const Home = () => {
                     <span className="text-primary-foreground font-bold text-sm">3</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground mb-1">Öva Nya Färdigheter</h4>
+                    <h4 className="font-semibold text-foreground mb-1">Öva på nya färdigheter</h4>
                     <p className="text-sm text-muted-foreground">Utveckla hälsosammare copingstrategier</p>
                   </div>
                 </div>
@@ -148,7 +148,7 @@ const Home = () => {
                     <span className="text-primary-foreground font-bold text-sm">4</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground mb-1">Skapa Bestående Förändring</h4>
+                    <h4 className="font-semibold text-foreground mb-1">Skapa bestående förändring</h4>
                     <p className="text-sm text-muted-foreground">Bygg motståndskraft för långsiktigt välbefinnande</p>
                   </div>
                 </div>
@@ -162,7 +162,7 @@ const Home = () => {
       <section className="py-20 px-4 bg-gradient-calm">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Vad Människor Säger</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-4">Vad människor säger</h2>
             <p className="text-lg text-muted-foreground max-w-xl mx-auto">
               Hör från några av de underbara människor jag haft förmånen att arbeta med
             </p>
@@ -171,11 +171,11 @@ const Home = () => {
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {[
               {
-                name: "Sarah",
-                text: "Att arbeta med den här terapeuten hjälpte mig förstå min ångest på ett helt nytt sätt. Jag har äntligen verktyg som faktiskt fungerar, och jag känner mig så mycket mer självsäker."
+                name: "Emma",
+                text: "Att arbeta med Anna-Karin hjälpte mig förstå min ångest på ett helt nytt sätt. Jag har äntligen verktyg som faktiskt fungerar, och jag känner mig så mycket mer självsäker."
               },
               {
-                name: "Michael",
+                name: "Agnes",
                 text: "Jag var skeptisk till terapi först, men den varsamma metoden och praktiska teknikerna hjälpte mig verkligen att arbeta igenom min depression. Jag är tacksam för stödet."
               }
             ].map((testimonial, index) => (
@@ -202,7 +202,7 @@ const Home = () => {
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-foreground mb-6">
-            Redo Att Ta Det Första Steget?
+            Redo att ta första steget?
           </h2>
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-2xl mx-auto">
             Om du känner dig redo att arbeta med din mentala hälsa skulle jag gärna prata med dig. 
@@ -210,10 +210,10 @@ const Home = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity">
-              Boka Ett Samtal
+              Boka ett samtal
             </Button>
             <Button size="lg" variant="outline" asChild>
-              <Link to="/contact">Kontakta Mig</Link>
+              <Link to="/contact">Kontakta mig</Link>
             </Button>
           </div>
           <p className="text-sm text-muted-foreground mt-6">
