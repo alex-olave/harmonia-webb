@@ -6,56 +6,53 @@ import { Check, Clock, Users, Zap } from "lucide-react";
 const Pricing = () => {
   const pricingPlans = [
     {
-      icon: Clock,
-      name: "Individuella Sessioner",
-      price: "1200 kr",
+        icon: Clock,
+        name: "Individuell samtal helg",
+      price: "900 kr",
       period: "per session",
-      description: "Standard en-till-en KBT-sessioner med personliga behandlingsplaner",
-      features: [
-        "50-minuters sessioner",
-        "Personlig behandlingsplan",
-        "Stöd mellan sessioner",
-        "Framstegsspårning",
-        "Hemuppgifter",
-        "Krisstöd tillgängligt"
+        description: "Standard en-till-en KBT-sessioner med personliga behandlingsplaner",
+        features: [
+            "60-minuters sessioner",
+          "Personlig behandlingsplan",
+          "Stöd mellan sessioner",
+          "Framstegsspårning",
+          "Hemuppgifter"
       ],
       popular: false,
-      bookingNote: "Typiskt 12-20 sessioner rekommenderas"
-    },
-    {
-      icon: Users,
-      name: "Gruppterapi",
-      price: "600 kr",
-      period: "per session",
-      description: "Små grupp-KBT-sessioner med stöd från andra och gemensamt lärande",
-      features: [
-        "90-minuters gruppsessioner",
-        "Maximalt 6-8 deltagare",
-        "Stödnätverk av andra",
-        "Gruppövningar och aktiviteter",
-        "Individuella checkins",
-        "Material att ta hem"
-      ],
-      popular: true,
-      bookingNote: "10-12 veckors program"
-    },
-    {
-      icon: Zap,
-      name: "Intensivt Program",
-      price: "2000 kr",
-      period: "per session",
-      description: "Accelererad behandling med flera sessioner per vecka för snabbare resultat",
-      features: [
-        "2-3 sessioner per vecka",
-        "Snabbare symptomlindrung",
-        "Prioriterad schemaläggning",
-        "Utökade sessionsmöjligheter",
-        "Krisintervention",
-        "Omfattande vårdkoordinering"
-      ],
-      popular: false,
-      bookingNote: "6-8 veckors intensivprogram"
-    }
+      bookingNote: "Lördag och söndag 10-18"
+      },
+      {
+          icon: Clock,
+          name: "Individuell samtal vardag",
+          price: "800 kr",
+          period: "per session",
+          description: "Standard en-till-en KBT-sessioner med personliga behandlingsplaner",
+          features: [
+              "60-minuters sessioner",
+              "Personlig behandlingsplan",
+              "Stöd mellan sessioner",
+              "Framstegsspårning",
+              "Hemuppgifter"
+          ],
+          popular: true,
+          bookingNote: "Vardagar 17-21"
+      },
+      {
+          icon: Clock,
+          name: "Individuella samtal paket",
+          price: "600 kr",
+          period: "per session",
+          description: "Åtta KBT-sessioner med personliga behandlingsplaner",
+          features: [
+              "En eller flera samtal i veckan",
+              "Personlig behandlingsplan",
+              "Stöd mellan sessioner",
+              "Framstegsspårning",
+              "Hemuppgifter"
+          ],
+          popular: false,
+          bookingNote: "Vardagar 17-21, Lördag och söndag 10-18"
+      }
   ];
 
   const packages = [
@@ -92,7 +89,7 @@ const Pricing = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Transparenta Priser
+              Prislista
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Prisvärd, högkvalitativ kognitiv beteendeterapi med flexibla betalningsalternativ. 
@@ -144,63 +141,52 @@ const Pricing = () => {
           </div>
 
           {/* Package Deals */}
-          <div className="mb-20">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-4">Paketpriser</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
-                Spara pengar med våra sessionspaket. Perfekt för engagerade individer redo att investera i sin mentala hälsoresa.
-              </p>
-            </div>
+          {/*<div className="mb-20">*/}
+          {/*  <div className="text-center mb-12">*/}
+          {/*    <h2 className="text-3xl font-bold text-foreground mb-4">Paketpriser</h2>*/}
+          {/*    <p className="text-muted-foreground max-w-2xl mx-auto">*/}
+          {/*      Spara pengar med våra sessionspaket. Perfekt för engagerade individer redo att investera i sin mentala hälsoresa.*/}
+          {/*    </p>*/}
+          {/*  </div>*/}
             
-            <div className="grid md:grid-cols-3 gap-8">
-              {packages.map((pkg, index) => (
-                <Card key={index} className="bg-card shadow-card hover:shadow-gentle transition-all duration-300">
-                  <CardHeader className="text-center">
-                    <CardTitle className="text-xl text-foreground">{pkg.name}</CardTitle>
-                    <div className="space-y-2">
-                      <p className="text-2xl font-bold text-foreground">{pkg.discountedPrice}</p>
-                      <p className="text-sm text-muted-foreground line-through">{pkg.originalPrice}</p>
-                      <Badge variant="secondary" className="text-green-600">
-                        Spara {pkg.savings}
-                      </Badge>
-                    </div>
-                  </CardHeader>
-                  <CardContent className="text-center space-y-4">
-                    <p className="font-semibold text-foreground">{pkg.sessions}</p>
-                    <p className="text-sm text-muted-foreground">{pkg.description}</p>
-                    <Button className="w-full bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity">
-                      Välj Paket
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
+          {/*  <div className="grid md:grid-cols-3 gap-8">*/}
+          {/*    {packages.map((pkg, index) => (*/}
+          {/*      <Card key={index} className="bg-card shadow-card hover:shadow-gentle transition-all duration-300">*/}
+          {/*        <CardHeader className="text-center">*/}
+          {/*          <CardTitle className="text-xl text-foreground">{pkg.name}</CardTitle>*/}
+          {/*          <div className="space-y-2">*/}
+          {/*            <p className="text-2xl font-bold text-foreground">{pkg.discountedPrice}</p>*/}
+          {/*            <p className="text-sm text-muted-foreground line-through">{pkg.originalPrice}</p>*/}
+          {/*            <Badge variant="secondary" className="text-green-600">*/}
+          {/*              Spara {pkg.savings}*/}
+          {/*            </Badge>*/}
+          {/*          </div>*/}
+          {/*        </CardHeader>*/}
+          {/*        <CardContent className="text-center space-y-4">*/}
+          {/*          <p className="font-semibold text-foreground">{pkg.sessions}</p>*/}
+          {/*          <p className="text-sm text-muted-foreground">{pkg.description}</p>*/}
+          {/*          <Button className="w-full bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity">*/}
+          {/*            Välj Paket*/}
+          {/*          </Button>*/}
+          {/*        </CardContent>*/}
+          {/*      </Card>*/}
+          {/*    ))}*/}
+          {/*  </div>*/}
+          {/*</div>*/}
 
           {/* Insurance & Payment Info */}
           <div className="grid lg:grid-cols-2 gap-8 mb-20">
             <Card className="bg-card shadow-card">
               <CardHeader>
-                <CardTitle className="text-xl text-foreground">Försäkring & Betalning</CardTitle>
+                <CardTitle className="text-xl text-foreground">Betalning</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <div>
-                  <h4 className="font-semibold text-foreground mb-2">Accepterade Försäkringar</h4>
-                  <ul className="space-y-1 text-sm text-muted-foreground">
-                    <li>• Folksam</li>
-                    <li>• Länsförsäkringar</li>
-                    <li>• If</li>
-                    <li>• Trygg-Hansa</li>
-                    <li>• Och många andra</li>
-                  </ul>
-                </div>
                 <div>
                   <h4 className="font-semibold text-foreground mb-2">Betalningsalternativ</h4>
                   <ul className="space-y-1 text-sm text-muted-foreground">
                     <li>• Kredit/Betalkort</li>
-                    <li>• Friskvårdsbidrag Accepteras</li>
-                    <li>• Betalningsplaner Tillgängliga</li>
-                    <li>• Glidande Skala för Ekonomiska Svårigheter</li>
+                    <li>• Faktura</li>
+                    <li>• Epassi</li>
                   </ul>
                 </div>
               </CardContent>
@@ -223,7 +209,7 @@ const Pricing = () => {
                 <div>
                   <h4 className="font-semibold text-foreground mb-2">Avbokningspolicy</h4>
                   <p className="text-sm text-muted-foreground">
-                    24 timmars avbokningsvarsel krävs. Sena avbokningar kan medföra en avgift motsvarande 50% av sessionskostnaden.
+                                      Om du behöver avboka bör det göras senast 8 timmar innan bokad session.
                   </p>
                 </div>
               </CardContent>
@@ -232,16 +218,16 @@ const Pricing = () => {
 
           {/* CTA Section */}
           <div className="text-center bg-card p-8 rounded-lg shadow-card">
-            <h3 className="text-2xl font-bold text-foreground mb-4">Redo Att Komma Igång?</h3>
+            <h3 className="text-2xl font-bold text-foreground mb-4">Redo att komma igång?</h3>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
               Ta det första steget mot bättre mental hälsa. Boka en konsultation idag för att diskutera dina behov och hitta rätt behandlingsplan för dig.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity">
-                Boka Gratis Konsultation
+                Boka gratis konsultation
               </Button>
               <Button size="lg" variant="outline">
-                Kontakta Mig
+                Kontakta mig
               </Button>
             </div>
           </div>

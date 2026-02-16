@@ -36,10 +36,10 @@ const Contact = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Kontakt
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Redo att ta första steget mot bättre mental hälsa? Jag är här för att hjälpa.
-              Kontakta mig idag för att boka en konsultation eller ställa frågor.
-            </p>
+          {/*  <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">*/}
+          {/*    Redo att ta första steget mot bättre mental hälsa? Jag är här för att hjälpa.*/}
+          {/*    Kontakta mig idag för att boka en konsultation eller ställa frågor.*/}
+          {/*  </p>*/}
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8 mb-20">
@@ -150,22 +150,22 @@ const Contact = () => {
                   <CardTitle className="text-xl text-foreground">Kontaktinformation</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-6">
-                  <div className="flex items-start gap-3">
-                    <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                    <div>
-                      <p className="font-medium text-foreground">Adress</p>
-                      <p className="text-sm text-muted-foreground">
-                        Online-terapi<br />
-                        Hela Sverige<br />
-                      </p>
-                    </div>
-                  </div>
+                  {/*<div className="flex items-start gap-3">*/}
+                  {/*  <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0" />*/}
+                  {/*  <div>*/}
+                  {/*    <p className="font-medium text-foreground">Adress</p>*/}
+                  {/*    <p className="text-sm text-muted-foreground">*/}
+                  {/*      Online-terapi<br />*/}
+                  {/*      Hela Sverige<br />*/}
+                  {/*    </p>*/}
+                  {/*  </div>*/}
+                  {/*</div>*/}
 
                   <div className="flex items-start gap-3">
                     <Phone className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                     <div>
                       <p className="font-medium text-foreground">Telefon</p>
-                      <p className="text-sm text-muted-foreground">070-123 45 67</p>
+                      <p className="text-sm text-muted-foreground">073 81 24 226</p>
                       <p className="text-xs text-muted-foreground">Krislinje: 112</p>
                     </div>
                   </div>
@@ -179,35 +179,35 @@ const Contact = () => {
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-3">
-                    <Clock className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                    <div>
-                      <p className="font-medium text-foreground">Tider</p>
-                      <div className="text-sm text-muted-foreground space-y-1">
-                        <p>Måndag - fredag: 08:00 - 20:00</p>
-                        <p>Lördag: 09:00 - 17:00</p>
-                        <p>Söndag: 10:00 - 16:00</p>
-                      </div>
-                    </div>
-                  </div>
+                {/*  <div className="flex items-start gap-3">*/}
+                {/*    <Clock className="w-5 h-5 text-primary mt-1 flex-shrink-0" />*/}
+                {/*    <div>*/}
+                {/*      <p className="font-medium text-foreground">Tider</p>*/}
+                {/*      <div className="text-sm text-muted-foreground space-y-1">*/}
+                {/*        <p>Måndag - fredag: 17 - 20:00</p>*/}
+                {/*        <p>Lördag: 09:00 - 17:00</p>*/}
+                {/*        <p>Söndag: 10:00 - 16:00</p>*/}
+                {/*      </div>*/}
+                {/*    </div>*/}
+                {/*  </div>*/}
                 </CardContent>
               </Card>
 
-              <Card className="bg-card shadow-card">
-                <CardHeader>
-                  <CardTitle className="text-lg text-foreground">Snabbåtgärder</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <Button className="w-full bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity">
-                    <Calendar className="w-4 h-4 mr-2" />
-                    Boka kostnadsfri konsultation
-                  </Button>
-                  <Button variant="outline" className="w-full">
-                    <MessageCircle className="w-4 h-4 mr-2" />
-                    Livechatt
-                  </Button>
-                </CardContent>
-              </Card>
+              {/*<Card className="bg-card shadow-card">*/}
+              {/*  <CardHeader>*/}
+              {/*    <CardTitle className="text-lg text-foreground">Snabbåtgärder</CardTitle>*/}
+              {/*  </CardHeader>*/}
+              {/*  <CardContent className="space-y-4">*/}
+              {/*    <Button className="w-full bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity">*/}
+              {/*      <Calendar className="w-4 h-4 mr-2" />*/}
+              {/*      Boka kostnadsfri konsultation*/}
+              {/*    </Button>*/}
+              {/*    <Button variant="outline" className="w-full">*/}
+              {/*      <MessageCircle className="w-4 h-4 mr-2" />*/}
+              {/*      Livechatt*/}
+              {/*    </Button>*/}
+              {/*  </CardContent>*/}
+              {/*</Card>*/}
 
               <Card className="bg-card shadow-card">
                 <CardHeader>
@@ -253,13 +253,15 @@ const Contact = () => {
                   <div>
                     <h4 className="font-semibold text-foreground mb-2">Erbjuder du online-terapi?</h4>
                     <p className="text-sm text-muted-foreground">
-                      Ja, jag erbjuder säkra videoterapi-sessioner för din bekvämlighet. Många klienter tycker att online-terapi är lika effektivt som fysiska möten.
+                        Ja, jag erbjuder samtalen online för din bekvämlighet. Samtalet genomförs med kameran på så att vi kan se varandra, men det går även bra att delta utan kamera om du föredrar det.
+                        Samtalen gör vi via Google Meet.
                     </p>
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-2">Vad kan jag förvänta mig av första sessionen?</h4>
                     <p className="text-sm text-muted-foreground">
-                      Första sessionen fokuserar på att förstå dina bekymmer, diskutera dina mål och tillsammans utveckla en personlig behandlingsplan.
+                        Första sessionen är främst ett samtal där vi lär känna varandra och går igenom vad som är viktigt för just dig, och
+                        tillsammans utformar vi en plan för att hitta ett nytt förhållningssätt till negativa tankemönster.
                     </p>
                   </div>
                 </div>
@@ -267,7 +269,7 @@ const Contact = () => {
                   <div>
                     <h4 className="font-semibold text-foreground mb-2">Är min information konfidentiell?</h4>
                     <p className="text-sm text-muted-foreground">
-                      Absolut. Alla sessioner och kommunikation är strikt konfidentiell, enligt sekretesslagen och professionella etiska riktlinjer.
+                      Absolut. Alla sessioner och kommunikation är strikt konfidentiell.
                     </p>
                   </div>
                   <div>
@@ -277,9 +279,9 @@ const Contact = () => {
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground mb-2">Tar du emot försäkring?</h4>
+                    <h4 className="font-semibold text-foreground mb-2">Tar du emot friskvårdsbidrag?</h4>
                     <p className="text-sm text-muted-foreground">
-                      Jag tar emot de flesta större försäkringsbolag. Jag hjälper gärna till att kontrollera ditt försäkringsskydd innan första sessionen.
+                        Ja, om om du har Epassi.
                     </p>
                   </div>
                 </div>

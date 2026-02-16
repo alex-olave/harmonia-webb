@@ -11,16 +11,13 @@ const Home = () => {
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="animate-fade-in">
-            <Badge className="mb-6 bg-accent text-accent-foreground px-4 py-2">
-              Medkännande KBT-stöd
-            </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
-              Hitta din väg till
-              <span className="bg-gradient-primary bg-clip-text text-transparent"> känslomässigt välbefinnande</span>
+              Harmonia
+              <span className="bg-gradient-primary bg-clip-text text-transparent"></span>
             </h1>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-              Jag heter Anna-Karin och erbjuder online KBT-terapi för dig som vill förstå dig själv bättre och känna större acceptans. 
-              Tillsammans utforskar vi vägar som gör livet lite lättare och mer meningsfullt.
+                          Jag heter Anna-Karin och är  diplomerad KBT-terapeut. Jag arbetar som samtalsterapeut med KBT (kognitiv beteendeterapi) i fokus. Med hjälp av KBT får du hjälp med att förändra negativa tankar och beteenden som påverkar ditt välmående. Våra samtal utförs online, vilket är en fördel för dig som har ett hektiskt vardagsliv eller andra orsaker som gör att det är svårt att behöva åka iväg  för att träffa en terapeut.
+
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity">
@@ -57,26 +54,6 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { icon: Brain, title: "Ångest & panik", description: "Övervinn överväldigande oro, panikattacker och social ångest med beprövade KBT-tekniker." },
-              { icon: Heart, title: "Depression", description: "Bryt dig fri från negativa tankemönster och återfå glädje och motivation i ditt liv." },
-              { icon: Users, title: "Relationsproblem", description: "Förbättra kommunikation och lös konflikter i dina personliga relationer." },
-              { icon: Shield, title: "Trauma & PTSD", description: "Bearbeta traumatiska upplevelser säkert med specialiserade traumafokuserade KBT-metoder." },
-              { icon: Brain, title: "OCD & fobier", description: "Minska tvångsbeteenden och övervinn specifika rädslor genom gradvis exponering." },
-              { icon: Heart, title: "Livsförändringar", description: "Navigera stora livsförändringar med självförtroende och känslomässig motståndskraft." }
-            ].map((item, index) => (
-              <Card key={index} className="bg-card shadow-card hover:shadow-gentle transition-all duration-300 animate-fade-in">
-                <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                    <item.icon className="w-8 h-8 text-primary-foreground" />
-                  </div>
-                  <h3 className="text-xl font-bold text-foreground mb-3">{item.title}</h3>
-                  <p className="text-muted-foreground">{item.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -198,29 +175,29 @@ const Home = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-foreground mb-6">
-            Redo att ta första steget?
-          </h2>
-          <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-2xl mx-auto">
-            Om du känner dig redo att arbeta med din mentala hälsa skulle jag gärna prata med dig. 
-            Vi kan börja med ett vänligt samtal för att se om vi passar bra att arbeta tillsammans.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity">
-              Boka ett samtal
-            </Button>
-            <Button size="lg" variant="outline" asChild>
-              <Link to="/contact">Kontakta mig</Link>
-            </Button>
-          </div>
-          <p className="text-sm text-muted-foreground mt-6">
-            Vänlig konsultation • Flexibel schemaläggning • De flesta försäkringar accepteras
-          </p>
-        </div>
-      </section>
+    {/*  */}{/* CTA Section */}
+    {/*  <section className="py-20 px-4">*/}
+    {/*    <div className="max-w-4xl mx-auto text-center">*/}
+    {/*      <h2 className="text-3xl font-bold text-foreground mb-6">*/}
+    {/*        Redo att ta första steget?*/}
+    {/*      </h2>*/}
+    {/*      <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-2xl mx-auto">*/}
+    {/*        Om du känner dig redo att arbeta med din mentala hälsa skulle jag gärna prata med dig. */}
+    {/*        Vi kan börja med ett vänligt samtal för att se om vi passar bra att arbeta tillsammans.*/}
+    {/*      </p>*/}
+    {/*      <div className="flex flex-col sm:flex-row gap-4 justify-center">*/}
+    {/*        <Button size="lg" className="bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity">*/}
+    {/*          Boka ett samtal*/}
+    {/*        </Button>*/}
+    {/*        <Button size="lg" variant="outline" asChild>*/}
+    {/*          <Link to="/contact">Kontakta mig</Link>*/}
+    {/*        </Button>*/}
+    {/*      </div>*/}
+    {/*      <p className="text-sm text-muted-foreground mt-6">*/}
+    {/*        Vänlig konsultation • Flexibel schemaläggning • De flesta försäkringar accepteras*/}
+    {/*      </p>*/}
+    {/*    </div>*/}
+    {/*  </section>*/}
     </div>
   );
 };
