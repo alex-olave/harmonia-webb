@@ -141,7 +141,7 @@ const Home = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-4">Vad människor säger</h2>
             <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-              Hör från några av de underbara människor jag haft förmånen att arbeta med
+              Hör från några av de människor jag haft förmånen att arbeta med
             </p>
           </div>
 
@@ -150,11 +150,11 @@ const Home = () => {
               {
                 name: "Emma",
                 text: "Att arbeta med Anna-Karin hjälpte mig förstå min ångest på ett helt nytt sätt. Jag har äntligen verktyg som faktiskt fungerar, och jag känner mig så mycket mer självsäker."
-              },
-              {
-                name: "Agnes",
-                text: "Jag var skeptisk till terapi först, men den varsamma metoden och praktiska teknikerna hjälpte mig verkligen att sluta bajsa inomhus. Jag är tacksam för stödet."
               }
+            //  {
+            //    name: "Agnes",
+            //    text: "Jag var skeptisk till terapi först, men den varsamma metoden och praktiska teknikerna hjälpte mig verkligen att sluta bajsa inomhus. Jag är tacksam för stödet."
+            //  }
             ].map((testimonial, index) => (
               <Card key={index} className="bg-card shadow-card animate-fade-in">
                 <CardContent className="p-6">
