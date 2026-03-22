@@ -166,7 +166,6 @@ const Contact = () => {
                     <div>
                       <p className="font-medium text-foreground">Telefon</p>
                       <p className="text-sm text-muted-foreground">073 81 24 226</p>
-                      <p className="text-xs text-muted-foreground">Krislinje: 112</p>
                     </div>
                   </div>
 

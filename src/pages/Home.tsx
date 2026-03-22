@@ -5,6 +5,17 @@ import { Brain, Heart, Users, Shield, CheckCircle, Star, Quote } from "lucide-re
 import { Link } from "react-router-dom";
 
 const Home = () => {
+  const testimonials = [
+    {
+      name: "Emma",
+      text: "Att arbeta med Anna-Karin hjälpte mig förstå min ångest på ett helt nytt sätt. Jag har äntligen verktyg som faktiskt fungerar, och jag känner mig så mycket mer självsäker."
+    }
+    //  {
+    //    name: "Agnes",
+    //    text: "Jag var skeptisk till terapi först, men den varsamma metoden och praktiska teknikerna hjälpte mig verkligen att sluta bajsa inomhus. Jag är tacksam för stödet."
+    //  }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-hero">
       {/* Hero Section */}
@@ -16,8 +27,7 @@ const Home = () => {
               <span className="bg-gradient-primary bg-clip-text text-transparent"></span>
             </h1>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-                          Jag heter Anna-Karin och är  diplomerad KBT-terapeut. Jag arbetar som samtalsterapeut med KBT (kognitiv beteendeterapi) i fokus. Med hjälp av KBT får du hjälp med att förändra negativa tankar och beteenden som påverkar ditt välmående. Våra samtal utförs online, vilket är en fördel för dig som har ett hektiskt vardagsliv eller andra orsaker som gör att det är svårt att behöva åka iväg  för att träffa en terapeut.
-
+              Jag heter Anna-Karin och är diplomerad KBT-terapeut. Jag arbetar som samtalsterapeut med KBT (kognitiv beteendeterapi) i fokus. Med hjälp av KBT får du hjälp med att förändra negativa tankar och beteenden som påverkar ditt välmående. Våra samtal utförs online, vilket är en fördel för dig som har ett hektiskt vardagsliv eller andra orsaker som gör att det är svårt att behöva åka iväg för att träffa en terapeut.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity">
@@ -49,11 +59,10 @@ const Home = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-4">Hur jag kan hjälpa dig</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Jag specialiserar mig på att hjälpa människor arbeta igenom dessa vanliga utmaningar med 
+              Jag specialiserar mig på att hjälpa människor arbeta igenom dessa vanliga utmaningar med
               varsamma, evidensbaserade kognitiva beteendeterapi-tekniker.
             </p>
           </div>
-
         </div>
       </section>
 
@@ -66,10 +75,10 @@ const Home = () => {
                 Varför kognitiv beteendeterapi?
               </h2>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                KBT är en av de mest effektiva terapiformerna eftersom den ger dig praktiska verktyg du kan använda direkt. 
+                KBT är en av de mest effektiva terapiformerna eftersom den ger dig praktiska verktyg du kan använda direkt.
                 Jag tror att förändring ofta börjar med små steg, och att det är lättare att ta dem när man inte går ensam.
               </p>
-              
+
               <div className="space-y-4">
                 {[
                   "Praktiska verktyg du kan använda omedelbart",
@@ -84,7 +93,7 @@ const Home = () => {
                   </div>
                 ))}
               </div>
-              
+
               <Button className="mt-8 bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity" asChild>
                 <Link to="/about">Läs mer om min metodik</Link>
               </Button>
@@ -146,17 +155,11 @@ const Home = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {[
-              {
-                name: "Emma",
-                text: "Att arbeta med Anna-Karin hjälpte mig förstå min ångest på ett helt nytt sätt. Jag har äntligen verktyg som faktiskt fungerar, och jag känner mig så mycket mer självsäker."
-              }
-            //  {
-            //    name: "Agnes",
-            //    text: "Jag var skeptisk till terapi först, men den varsamma metoden och praktiska teknikerna hjälpte mig verkligen att sluta bajsa inomhus. Jag är tacksam för stödet."
-            //  }
-            ].map((testimonial, index) => (
-              <Card key={index} className="bg-card shadow-card animate-fade-in">
+            {testimonials.map((testimonial, index) => (
+              <Card
+                key={index}
+                className={`bg-card shadow-card animate-fade-in ${testimonials.length === 1 ? "md:col-span-2 md:max-w-[calc(50%-1rem)] md:mx-auto w-full" : ""}`}
+              >
                 <CardContent className="p-6">
                   <Quote className="w-6 h-6 text-primary mb-4" />
                   <p className="text-muted-foreground mb-4 italic leading-relaxed">"{testimonial.text}"</p>
@@ -175,29 +178,29 @@ const Home = () => {
         </div>
       </section>
 
-    {/*  */}{/* CTA Section */}
-    {/*  <section className="py-20 px-4">*/}
-    {/*    <div className="max-w-4xl mx-auto text-center">*/}
-    {/*      <h2 className="text-3xl font-bold text-foreground mb-6">*/}
-    {/*        Redo att ta första steget?*/}
-    {/*      </h2>*/}
-    {/*      <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-2xl mx-auto">*/}
-    {/*        Om du känner dig redo att arbeta med din mentala hälsa skulle jag gärna prata med dig. */}
-    {/*        Vi kan börja med ett vänligt samtal för att se om vi passar bra att arbeta tillsammans.*/}
-    {/*      </p>*/}
-    {/*      <div className="flex flex-col sm:flex-row gap-4 justify-center">*/}
-    {/*        <Button size="lg" className="bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity">*/}
-    {/*          Boka ett samtal*/}
-    {/*        </Button>*/}
-    {/*        <Button size="lg" variant="outline" asChild>*/}
-    {/*          <Link to="/contact">Kontakta mig</Link>*/}
-    {/*        </Button>*/}
-    {/*      </div>*/}
-    {/*      <p className="text-sm text-muted-foreground mt-6">*/}
-    {/*        Vänlig konsultation • Flexibel schemaläggning • De flesta försäkringar accepteras*/}
-    {/*      </p>*/}
-    {/*    </div>*/}
-    {/*  </section>*/}
+      {/*  */}{/* CTA Section */}
+      {/*  <section className="py-20 px-4">*/}
+      {/*    <div className="max-w-4xl mx-auto text-center">*/}
+      {/*      <h2 className="text-3xl font-bold text-foreground mb-6">*/}
+      {/*        Redo att ta första steget?*/}
+      {/*      </h2>*/}
+      {/*      <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-2xl mx-auto">*/}
+      {/*        Om du känner dig redo att arbeta med din mentala hälsa skulle jag gärna prata med dig. */}
+      {/*        Vi kan börja med ett vänligt samtal för att se om vi passar bra att arbeta tillsammans.*/}
+      {/*      </p>*/}
+      {/*      <div className="flex flex-col sm:flex-row gap-4 justify-center">*/}
+      {/*        <Button size="lg" className="bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity">*/}
+      {/*          Boka ett samtal*/}
+      {/*        </Button>*/}
+      {/*        <Button size="lg" variant="outline" asChild>*/}
+      {/*          <Link to="/contact">Kontakta mig</Link>*/}
+      {/*        </Button>*/}
+      {/*      </div>*/}
+      {/*      <p className="text-sm text-muted-foreground mt-6">*/}
+      {/*        Vänlig konsultation • Flexibel schemaläggning • De flesta försäkringar accepteras*/}
+      {/*      </p>*/}
+      {/*    </div>*/}
+      {/*  </section>*/}
     </div>
   );
 };
