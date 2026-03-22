@@ -1,5 +1,4 @@
 import SEO, { SITE_URL } from "@/components/SEO";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, Quote, Star } from "lucide-react";
@@ -86,12 +85,30 @@ const Home = () => {
       <section className="py-20 px-4 bg-gradient-calm">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Hur jag kan hjälpa dig</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Jag specialiserar mig på att hjälpa människor arbeta igenom dessa vanliga utmaningar med
-              varsamma, evidensbaserade kognitiva beteendeterapi-tekniker.
-          </p>
-        </div>
+            <h2 className="text-2xl font-bold text-foreground mb-4">
+              Jag kan hjälpa dig att arbeta igenom dessa vanliga utmaningar
+            </h2>
+            <div className="max-w-2xl mx-auto mt-8 rounded-2xl border border-border/60 bg-card/80 p-6 shadow-card backdrop-blur-sm md:p-8">
+              <ul className="grid gap-4 text-left text-muted-foreground md:grid-cols-2">
+                {[
+                  "Upplever stress",
+                  "Känner oro eller ångest",
+                  "Har låg självkänsla",
+                  "Har svårt att sätta gränser",
+                  "Vill bryta negativa tankemönster",
+                  "Står inför förändringar i livet",
+                ].map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-start gap-3 rounded-xl bg-background/50 px-4 py-3 text-base leading-relaxed"
+                  >
+                    <span className="mt-2 h-2 w-2 rounded-full bg-primary/70 flex-shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -103,8 +120,10 @@ const Home = () => {
                 Varför kognitiv beteendeterapi?
               </h2>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                KBT är en av de mest effektiva terapiformerna eftersom den ger dig praktiska verktyg du kan använda direkt.
-                Jag tror att förändring ofta börjar med små steg, och att det är lättare att ta dem när man inte går ensam.
+                KBT är en av de mest effektiva terapiformerna eftersom den ger
+                dig praktiska verktyg du kan använda direkt. Jag tror att
+                förändring ofta börjar med små steg, och att det är lättare att
+                ta dem när man inte går ensam.
               </p>
 
               <div className="space-y-4">
@@ -202,7 +221,10 @@ const Home = () => {
                   <div className="flex items-center gap-2">
                     <div className="flex">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                        <Star
+                          key={i}
+                          className="w-4 h-4 text-yellow-400 fill-current"
+                        />
                       ))}
                     </div>
                     <span className="text-sm font-medium text-foreground">
@@ -215,30 +237,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      {/*  */}{/* CTA Section */}
-      {/*  <section className="py-20 px-4">*/}
-      {/*    <div className="max-w-4xl mx-auto text-center">*/}
-      {/*      <h2 className="text-3xl font-bold text-foreground mb-6">*/}
-      {/*        Redo att ta första steget?*/}
-      {/*      </h2>*/}
-      {/*      <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-2xl mx-auto">*/}
-      {/*        Om du känner dig redo att arbeta med din mentala hälsa skulle jag gärna prata med dig. */}
-      {/*        Vi kan börja med ett vänligt samtal för att se om vi passar bra att arbeta tillsammans.*/}
-      {/*      </p>*/}
-      {/*      <div className="flex flex-col sm:flex-row gap-4 justify-center">*/}
-      {/*        <Button size="lg" className="bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity">*/}
-      {/*          Boka ett samtal*/}
-      {/*        </Button>*/}
-      {/*        <Button size="lg" variant="outline" asChild>*/}
-      {/*          <Link to="/contact">Kontakta mig</Link>*/}
-      {/*        </Button>*/}
-      {/*      </div>*/}
-      {/*      <p className="text-sm text-muted-foreground mt-6">*/}
-      {/*        Vänlig konsultation • Flexibel schemaläggning • De flesta försäkringar accepteras*/}
-      {/*      </p>*/}
-      {/*    </div>*/}
-      {/*  </section>*/}
     </div>
   );
 };
