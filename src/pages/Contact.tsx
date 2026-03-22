@@ -152,13 +152,11 @@ const Contact = () => {
                         className="w-full px-3 py-2 bg-background border border-input rounded-md text-sm"
                       >
                         <option value="">Välj ett ämne</option>
-                        <option value="consultation">Kostnadsfri konsultation</option>
-                        <option value="individual">Individuell terapi</option>
-                        <option value="group">Gruppterapi</option>
-                        <option value="couples">Parterapi</option>
-                        <option value="pricing">Prisfrågor</option>
-                        <option value="insurance">Försäkringsfrågor</option>
-                        <option value="other">Annat</option>
+                        <option value="Kostnadsfri konsultation">Kostnadsfri konsultation</option>
+                        <option value="Individuell terapi">Individuell terapi</option>
+                        <option value="Prisfrågor">Prisfrågor</option>
+                        <option value="Försäkringsfrågornce">Försäkringsfrågor</option>
+                        <option value="Annat">Annat</option>
                       </select>
                     </div>
 
