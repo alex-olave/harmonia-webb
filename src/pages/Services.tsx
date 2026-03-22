@@ -1,68 +1,75 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import SEO, { SITE_URL } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Brain, Heart, Users, Zap, Shield, Target } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Brain, Zap } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const services = [
     {
       icon: Brain,
       title: "Individuella KBT-sessioner",
-      description: "Individuella kognitiva beteendeterapi-sessioner anpassade till dina specifika behov och mål.",
-      features: ["Personliga behandlingsplaner", "Veckovisa 60-minuters sessioner", "Hemuppgifter", "Uppföljning"],
+      description:
+        "Individuella KBT-sessioner anpassade till dina behov, mål och vardag.",
+      features: [
+        "Personlig behandlingsplan",
+        "Veckovisa 60-minuters sessioner",
+        "Hemuppgifter mellan samtal",
+        "Uppföljning av framsteg",
+      ],
       duration: "12-20 veckor, eller efter behov",
     },
-    //{
-    //  icon: Users,
-    //  title: "Gruppterapi",
-    //  description: "Små gruppsessioner som ger stöd från andra samtidigt som ni lär er KBT-tekniker tillsammans.",
-    //  features: ["Maximalt 6-8 deltagare", "Veckovisa 90-minuters sessioner", "Stödnätverk av andra", "Kostnadseffektivt alternativ"],
-    //  duration: "10-12 veckor per grupp",
-    //  suitable: "Individer som är bekväma med gruppmiljöer och delade erfarenheter"
-    //},
-    //{
-    //  icon: Heart,
-    //  title: "Par-KBT",
-    //  description: "Specialiserad kognitiv beteendeterapi för par som hanterar relationsutmaningar.",
-    //  features: ["Gemensamma och individuella sessioner", "Träning i kommunikationsfärdigheter", "Konfliktlösningstekniker", "Relationsbedömning"],
-    //  duration: "Typiskt 8-16 veckor",
-    //  suitable: "Par som upplever kommunikationsproblem, konflikter eller relationsbekymmer"
-    //},
     {
       icon: Zap,
       title: "Intensivt KBT-program",
-      description: "Accelererat behandlingsprogram för individer som behöver mer frekventa sessioner.",
-      features: ["Personliga behandlingsplaner", "Veckovisa 60-minuters sessioner", "Hemuppgifter", "Uppföljning"],
+      description:
+        "Ett mer koncentrerat upplägg för dig som vill arbeta i ett högre tempo.",
+      features: [
+        "Tätare sessioner",
+        "Personlig behandlingsplan",
+        "Övningar mellan samtal",
+        "Uppföljning och justering",
+      ],
       duration: "6-8 veckor",
-      suitable: "Individer med allvarliga symptom eller tidskänsliga behandlingsbehov"
     },
-    //{
-    //  icon: Shield,
-    //  title: "Traumafokuserad KBT",
-    //  description: "Specialiserad behandling för traumarelaterade störningar med evidensbaserade KBT-tekniker.",
-    //  features: ["PTSD-behandling", "Traumabearbetning", "Säkerhet och stabilisering", "Gradvis exponenterapi"],
-    //  duration: "Typiskt 12-16 veckor",
-    //  suitable: "Individer med PTSD, traumahistoria eller traumarelaterade symptom"
-    //},
-  //  {
-  //    icon: Target,
-  //    title: "Specialiserade Program",
-  //    description: "Riktade KBT-program för specifika tillstånd och målgrupper.",
-  //    features: ["OCD-behandling", "Fobibehandling", "Panikstörningsprogram", "Ungdoms-KBT"],
-  //    duration: "Varierar per program",
-  //    suitable: "Individer med specifika diagnoser eller åldersrelaterade behov"
-  //  }
-  ];
-
-  const conditions = [
-    "Ångeststörningar", "Depression", "Panikstörning", "Social ångest", 
-    "OCD", "PTSD", "Fobier", "Stresshantering", "Relationsproblem", 
-    "Livsförändringar", "Sorg och förlust", "Ilskahantering"
   ];
 
   return (
     <div className="min-h-screen bg-gradient-calm">
-      {/* Hero Section */}
+      <SEO
+        title="Tjänster inom online KBT"
+        description="Se vilka KBT-tjänster Harmonia erbjuder online, inklusive individuella samtal, intensivare upplägg och hur behandlingen brukar läggas upp."
+        path="/services"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Online KBT-tjänster",
+          provider: {
+            "@type": "ProfessionalService",
+            name: "Harmonia KBT",
+            url: SITE_URL,
+          },
+          areaServed: "SE",
+          availableChannel: {
+            "@type": "ServiceChannel",
+            serviceUrl: `${SITE_URL}/services`,
+            availableLanguage: ["sv"],
+          },
+          hasOfferCatalog: {
+            "@type": "OfferCatalog",
+            name: "KBT-tjänster",
+            itemListElement: services.map((service) => ({
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: service.title,
+                description: service.description,
+              },
+            })),
+          },
+        }}
+      />
+
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
@@ -70,24 +77,30 @@ const Services = () => {
               Vad jag erbjuder
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                          Vanligen utformar vi tillsammans en plan som passar just dig, men här är några förslag på hur det brukar kunna se ut. I vissa fall räcker det 
-                          med några enstaka samtal. En session är i grunden en timme lång, men du kan boka längre eller kortare samtalstid vid behov. 
-   
+              Vi utformar tillsammans ett upplägg som passar just dig. Ibland
+              räcker ett mindre antal samtal, och ibland är ett mer strukturerat
+              program det bästa valet.
             </p>
           </div>
 
-          {/* Services Grid */}
           <div className="grid lg:grid-cols-2 gap-8 mb-20">
-            {services.map((service, index) => (
-              <Card key={index} className="bg-card shadow-card hover:shadow-gentle transition-all duration-300 animate-fade-in">
+            {services.map((service) => (
+              <Card
+                key={service.title}
+                className="bg-card shadow-card hover:shadow-gentle transition-all duration-300 animate-fade-in"
+              >
                 <CardHeader>
                   <div className="flex items-center gap-4 mb-4">
                     <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center">
                       <service.icon className="w-6 h-6 text-primary-foreground" />
                     </div>
                     <div>
-                      <CardTitle className="text-xl text-foreground">{service.title}</CardTitle>
-                      <p className="text-sm text-muted-foreground">{service.duration}</p>
+                      <CardTitle className="text-xl text-foreground">
+                        {service.title}
+                      </CardTitle>
+                      <p className="text-sm text-muted-foreground">
+                        {service.duration}
+                      </p>
                     </div>
                   </div>
                 </CardHeader>
@@ -95,12 +108,17 @@ const Services = () => {
                   <p className="text-muted-foreground leading-relaxed">
                     {service.description}
                   </p>
-                  
+
                   <div>
-                    <h4 className="font-semibold text-foreground mb-2">Vad som ingår:</h4>
+                    <h2 className="font-semibold text-foreground mb-2">
+                      Vad som ingår
+                    </h2>
                     <ul className="space-y-1">
-                      {service.features.map((feature, idx) => (
-                        <li key={idx} className="text-sm text-muted-foreground flex items-center gap-2">
+                      {service.features.map((feature) => (
+                        <li
+                          key={feature}
+                          className="text-sm text-muted-foreground flex items-center gap-2"
+                        >
                           <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
                           {feature}
                         </li>
@@ -108,42 +126,57 @@ const Services = () => {
                     </ul>
                   </div>
 
-                  <Button className="w-full bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity">
-                    Läs Mer
+                  <Button
+                    className="w-full bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity"
+                    asChild
+                  >
+                    <Link to="/contact">Boka eller fråga mer</Link>
                   </Button>
                 </CardContent>
               </Card>
             ))}
           </div>
 
-
-          {/* How CBT Works */}
           <div className="text-center">
-            <h2 className="text-3xl font-bold text-foreground mb-8">Så Fungerar KBT</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-8">
+              Så fungerar KBT
+            </h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="space-y-4">
                 <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto">
-                  <span className="text-primary-foreground font-bold text-xl">1</span>
+                  <span className="text-primary-foreground font-bold text-xl">
+                    1
+                  </span>
                 </div>
-                <h3 className="font-semibold text-lg text-foreground">Identifiera mönster</h3>
+                <h3 className="font-semibold text-lg text-foreground">
+                  Identifiera mönster
+                </h3>
                 <p className="text-muted-foreground">
                   Känna igen negativa tankemönster och beteenden som bidrar till dina utmaningar.
                 </p>
               </div>
               <div className="space-y-4">
                 <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto">
-                  <span className="text-primary-foreground font-bold text-xl">2</span>
+                  <span className="text-primary-foreground font-bold text-xl">
+                    2
+                  </span>
                 </div>
-                <h3 className="font-semibold text-lg text-foreground">Utmana tankar</h3>
+                <h3 className="font-semibold text-lg text-foreground">
+                  Utmana tankar
+                </h3>
                 <p className="text-muted-foreground">
                   Lär dig att ifrågasätta och omformulera onyttiga tankar med mer balanserade perspektiv.
                 </p>
               </div>
               <div className="space-y-4">
                 <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto">
-                  <span className="text-primary-foreground font-bold text-xl">3</span>
+                  <span className="text-primary-foreground font-bold text-xl">
+                    3
+                  </span>
                 </div>
-                <h3 className="font-semibold text-lg text-foreground">Utveckla strategier</h3>
+                <h3 className="font-semibold text-lg text-foreground">
+                  Utveckla strategier
+                </h3>
                 <p className="text-muted-foreground">
                   Bygg praktiska copingstrategier och beteendeförändringar för bestående resultat.
                 </p>

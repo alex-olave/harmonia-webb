@@ -21,14 +21,12 @@ const Navigation = () => {
     <nav className="bg-card/95 backdrop-blur-sm border-b border-border sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
           <Link to="/" className="flex items-center">
             <span className="font-cormorant font-medium text-2xl text-foreground">
               Harmonia
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <Link
@@ -43,12 +41,15 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
-            <Button size="sm" className="bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity">
-              Kontakta mig
+            <Button
+              size="sm"
+              className="bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity"
+              asChild
+            >
+              <Link to="/contact">Kontakta mig</Link>
             </Button>
           </div>
 
-          {/* Mobile menu button */}
           <div className="md:hidden">
             <Button
               variant="ghost"
@@ -61,7 +62,6 @@ const Navigation = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-card border-t border-border">
@@ -80,8 +80,12 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="px-3 py-2">
-                <Button size="sm" className="w-full bg-gradient-primary text-primary-foreground">
-                  Kontakta mig
+                <Button
+                  size="sm"
+                  className="w-full bg-gradient-primary text-primary-foreground"
+                  asChild
+                >
+                  <Link to="/contact">Kontakta mig</Link>
                 </Button>
               </div>
             </div>
