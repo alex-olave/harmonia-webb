@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { MapPin, Phone, Mail, Clock, MessageCircle, Calendar } from "lucide-react";
 
 const Contact = () => {
+  const formEndpoint = "https://formspree.io/f/mjgaqgyb";
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -16,11 +17,44 @@ const Contact = () => {
     subject: "",
     message: ""
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
+
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+
+    try {
+      const response = await fetch(formEndpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Form submission failed");
+      }
+
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        preferredContact: "email",
+        subject: "",
+        message: ""
+      });
+      setSubmitStatus("success");
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (field: string, value: string) => {
@@ -59,6 +93,7 @@ const Contact = () => {
                         <Label htmlFor="name">Fullständigt namn *</Label>
                         <Input
                           id="name"
+                          name="name"
                           value={formData.name}
                           onChange={(e) => handleInputChange("name", e.target.value)}
                           placeholder="Ditt fullständiga namn"
@@ -69,6 +104,7 @@ const Contact = () => {
                         <Label htmlFor="email">E-postadress *</Label>
                         <Input
                           id="email"
+                          name="email"
                           type="email"
                           value={formData.email}
                           onChange={(e) => handleInputChange("email", e.target.value)}
@@ -83,6 +119,7 @@ const Contact = () => {
                         <Label htmlFor="phone">Telefonnummer</Label>
                         <Input
                           id="phone"
+                          name="phone"
                           type="tel"
                           value={formData.phone}
                           onChange={(e) => handleInputChange("phone", e.target.value)}
@@ -93,6 +130,7 @@ const Contact = () => {
                         <Label htmlFor="contact-method">Föredragen kontaktväg</Label>
                         <select
                           id="contact-method"
+                          name="preferredContact"
                           value={formData.preferredContact}
                           onChange={(e) => handleInputChange("preferredContact", e.target.value)}
                           className="w-full px-3 py-2 bg-background border border-input rounded-md text-sm"
@@ -108,6 +146,7 @@ const Contact = () => {
                       <Label htmlFor="subject">Ämne</Label>
                       <select
                         id="subject"
+                        name="subject"
                         value={formData.subject}
                         onChange={(e) => handleInputChange("subject", e.target.value)}
                         className="w-full px-3 py-2 bg-background border border-input rounded-md text-sm"
@@ -127,6 +166,7 @@ const Contact = () => {
                       <Label htmlFor="message">Meddelande *</Label>
                       <Textarea
                         id="message"
+                        name="message"
                         value={formData.message}
                         onChange={(e) => handleInputChange("message", e.target.value)}
                         placeholder="Berätta hur jag kan hjälpa dig..."
@@ -135,8 +175,24 @@ const Contact = () => {
                       />
                     </div>
 
-                    <Button type="submit" className="w-full bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity">
-                      Skicka meddelande
+                    {submitStatus === "success" && (
+                      <p className="text-sm text-green-700">
+                        Tack! Ditt meddelande har skickats.
+                      </p>
+                    )}
+
+                    {submitStatus === "error" && (
+                      <p className="text-sm text-destructive">
+                        Något gick fel när meddelandet skulle skickas. Försök igen om en liten stund, eller mejla mig direkt på anna-karin@harmonia-kbt.se
+                      </p>
+                    )}
+
+                    <Button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity disabled:opacity-70"
+                    >
+                      {isSubmitting ? "Skickar..." : "Skicka meddelande"}
                     </Button>
                   </form>
                 </CardContent>
