@@ -12,13 +12,22 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
+const repoBasename = "/harmonia-webb";
+
+const getBasename = () => {
+  if (typeof window === "undefined") {
+    return "/";
+  }
+
+  return window.location.hostname.endsWith("github.io") ? repoBasename : "/";
+};
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename={import.meta.env.BASE_URL}>
+      <BrowserRouter basename={getBasename()}>
         <Navigation />
         <Routes>
           <Route path="/" element={<Home />} />
