@@ -106,7 +106,9 @@ const Home = () => {
                     <span>{item}</span>
                   </li>
                 ))}
-              </ul>
+                          </ul>
+                          <p className="text mt-4 text-muted-foreground max-w-2xl mx-auto">
+                              Det kan också vara att du vill må lite bättre, förstå dig själv bättre, eller hitta nya sätt att hantera livet. </p>
             </div>
           </div>
         </div>
